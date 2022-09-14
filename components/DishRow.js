@@ -3,6 +3,13 @@ import React from 'react'
 import Currency from 'react-currency-formatter'
 import {urlFor} from "../sanity";
 import {Feather} from "@expo/vector-icons";
+import {useDispatch, useSelector} from "react-redux";
+import {
+  addToBasket,
+  removeFromBasket,
+  selectBasketItems,
+  selectBasketItemsWithId
+} from "../features/basketSlice";
 
 const DishRow = ({
                    id,
@@ -12,7 +19,32 @@ const DishRow = ({
                    image,
                  }) => {
   const [isPressed, setIsPressed] = React.useState(false)
+  const dispatch = useDispatch()
+  const items = useSelector(state => selectBasketItemsWithId(state, id))
 
+  const addItemsToBasket = () => {
+    dispatch(addToBasket({
+      id,
+      name,
+      description,
+      price,
+      image,
+    }))
+  }
+
+  const removeItemsFromBasket = () => {
+    if (!items.length > 0) return;
+
+    dispatch(removeFromBasket({
+      id,
+      name,
+      description,
+      price,
+      image,
+    }))
+  }
+
+  console.log(items)
 
   return (
     <>
@@ -42,11 +74,11 @@ const DishRow = ({
       {isPressed && (
         <View className="bg-white px-4">
           <View className="flex-row items-center space-x-2 pb-3">
-            <TouchableOpacity>
-              <Feather size={40} name="minus-circle" color="gray"/>
+            <TouchableOpacity onPress={removeItemsFromBasket} disabled={!items.length}>
+              <Feather size={40} name="minus-circle" color={items.length > 0 ? "#00CCBB" : "gray"}/>
             </TouchableOpacity>
-            <Text>0</Text>
-            <TouchableOpacity>
+            <Text>{items.length}</Text>
+            <TouchableOpacity onPress={addItemsToBasket}>
               <Feather size={40} name="plus-circle" color="#00CCBB"/>
             </TouchableOpacity>
           </View>
