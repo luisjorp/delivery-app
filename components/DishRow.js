@@ -44,8 +44,6 @@ const DishRow = ({
     }))
   }
 
-  console.log(items)
-
   return (
     <>
       <TouchableOpacity
