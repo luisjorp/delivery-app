@@ -7,8 +7,6 @@ J
 sanity/schemas/featured.js,0/2/028723012a50d3ce716289bf348db9a314951278
 H
 sanity/schemas/schema.js,4/4/44b5fb49554d76e69cc004942e7a9b21d2b6aca3
-?
-babel.config.js,7/7/775bd43a34022cef87b6af825cbd551f29473f73
 B
 sanity/sanity.json,2/5/2549695875b824f94f2cb25c7b7a96cfd1ce7f9c
 L
