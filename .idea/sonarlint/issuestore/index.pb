@@ -27,5 +27,3 @@ L
 components/RestaurantCard.js,5/5/550ab0c963f90899bb13c3e6fc89188887204127
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
-6
-App.js,a/4/a4a49f7b4c549593514920b942b5a787f2773862
