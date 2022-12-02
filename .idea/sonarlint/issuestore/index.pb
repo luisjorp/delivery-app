@@ -27,3 +27,22 @@ L
 components/RestaurantCard.js,5/5/550ab0c963f90899bb13c3e6fc89188887204127
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
+8
+store.js,9/4/94af276c25727779efc4cfa45d83a3c73f4be23c
+K
+features/restaurantSlice.js,4/8/48432582c088e4068dcf2baf9ae47ba6057389fd
+E
+components/DishRow.js,a/4/a4fcdec0bd16c08af56f4dd665ad26936c20b416
+E
+screens/HomeScreen.js,a/3/a37605c86cef089387b1e1cb5ef855b950ccbb9f
+C
+sanity/package.json,4/5/45e80e323417831ab2b02cc01ba190327ab242e0
+K
+screens/RestaurantScreen.js,6/1/618d4ae47716c07aff6b7dd180c911d097976e79
+G
+features/basketSlice.js,0/2/02bbc3c3165c7fa27d996022fbca02838bd55f34
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+H
+components/BasketIcon.js,6/2/627fd9ef1a59b2ad81fe2dc54c7c44ac47c42ab9
