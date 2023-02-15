@@ -12,15 +12,15 @@ const DeliveryScreen = () => {
     const restaurant = useSelector(selectRestaurant)
 
     return (
-        <View className="bg-delivery flex-1">
+        <View className="flex-1 bg-delivery">
             <SafeAreaView className="z-50">
-                <View className="flex-row justify-between items-center p-5">
+                <View className="flex-row items-center justify-between p-5">
                     <TouchableOpacity onPress={() => navigation.navigate("Home")}>
                         <Feather name="x" size={40} color="#FFFFFF"/>
                     </TouchableOpacity>
-                    <Text className="font-light text-white text-lg">Order Help</Text>
+                    <Text className="text-lg font-light text-white">Order Help</Text>
                 </View>
-                <View className="bg-white mx-5 my-2 rounded-md p-6 z-50 shadow-md">
+                <View className="z-50 mx-5 my-2 rounded-md bg-white p-6 shadow-md">
                     <View className="flex-row justify-between">
                         <View>
                             <Text className="text-lg text-gray-400">Estimated Arrival</Text>
@@ -51,7 +51,7 @@ const DeliveryScreen = () => {
                         longitudeDelta: 0.005,
                     }
                 }
-                className="flex-1 -mt-10 z-0"
+                className="z-0 -mt-10 flex-1"
                 mapType="mutedStandard">
                 <Marker
                     coordinate={{
@@ -67,6 +67,29 @@ const DeliveryScreen = () => {
                            className="h-12 w-12 rounded-md"/>
                 </Marker>
             </MapView>
+
+            <SafeAreaView className="h-28 flex-row items-center bg-white space-x-5">
+                <Image
+                    source={{
+                        uri: "https://links.papareact.com/wru"
+                    }}
+                    className="ml-5 h-12 w-12 rounded-full bg-gray-300 p-4"
+                />
+
+                <View className="flex-1">
+                    <Text className="text-lg">
+                        LuisJo Ruano
+                    </Text>
+                    <Text className="text-gray-400">
+                        Your rider
+                    </Text>
+                </View>
+                <Text className="mr-5 text-xl font-bold text-delivery">
+                    Call
+                </Text>
+
+            </SafeAreaView>
+
         </View>
     )
 }
